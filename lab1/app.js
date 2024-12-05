@@ -51,9 +51,7 @@ async function displayPokemonList() {
     text.textContent = `${id}. ${pokemon.name}`;
     button.appendChild(img);
     button.appendChild(text);
-    button.addEventListener("click", () => {
-      displayPokemonInfo(info);
-    });
+    button.onclick = () => displayPokemonInfo(info);
     container.appendChild(button);
   }
 }
@@ -99,5 +97,14 @@ async function displayPokemonInfo(details) {
     loading.style.display = "none";
   }, 500);
 }
+
+async function handleSearch(event) {
+  const searchTerm = event.target.value.trim().toLowerCase();
+  const details = await getPokemonInfo(searchTerm);
+  displayPokemonInfo(details);
+}
+
+const searchBar = document.getElementById("search-bar");
+searchBar.addEventListener("input", handleSearch);
 
 displayPokemonList();
