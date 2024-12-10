@@ -1,7 +1,7 @@
 "use strict";
 
 async function getPokemonList() {
-  const url = "https://pokeapi.co/api/v2/pokemon"; // Pobieranie tylko 20 Pokémonów dla wydajności
+  const url = "https://pokeapi.co/api/v2/pokemon";
   try {
     const response = await fetch(url);
     if (!response.ok) {
