@@ -1,0 +1,74 @@
+div#content-PokemonList {
+  width: 100%;
+}
+
+div#pokemon-buttons {
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  width: 80%;
+  gap: 24px;
+  margin: 0 auto;
+}
+
+form#filter {
+  padding: 8px;
+  display: flex;
+}
+form#filter > input {
+  font-size: 16px;
+  padding: 4px;
+  border: 1px solid rgb(11, 56, 114);
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.5);
+  margin: 4px;
+}
+form#filter > input:hover {
+  background-color: rgba(255, 255, 255, 0.75);
+}
+form#filter > button {
+  margin: 4px;
+  color: rgb(11, 56, 114);
+  font-size: 16px;
+  padding: 4px;
+  border: 1px solid rgb(11, 56, 114);
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+form#filter > button:hover {
+  background-color: rgba(255, 255, 255, 0.75);
+  cursor: pointer;
+}
+
+label {
+  font-size: 16px;
+  margin: 4px;
+}
+
+div#pokemon-list {
+  display: flex;
+}
+
+button.pokemonButton {
+  margin: 0;
+  width: 100%;
+  font-size: 18px;
+  padding: 36px 0;
+  border: none;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: rgba(255, 255, 255, 0.75);
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+}
+button.pokemonButton:hover {
+  background-color: rgb(255, 255, 255);
+  cursor: pointer;
+}
+button.pokemonButton > img {
+  height: 54px;
+}
+
+a {
+  text-decoration: none;
+}/*# sourceMappingURL=styles_pokemon.css.map */

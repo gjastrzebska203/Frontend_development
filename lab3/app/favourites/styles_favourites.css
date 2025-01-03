@@ -1,0 +1,41 @@
+div#content-Favourites {
+  width: 100%;
+}
+
+div#favourites {
+  padding: 32px;
+  display: grid;
+  grid-template-columns: repeat(7, auto);
+  width: 80%;
+  gap: 24px;
+  margin: 0 auto;
+}
+
+div.favPokemon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+  border: none;
+  border-radius: 16px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+div.favPokemon > img {
+  height: 54px;
+  padding: 16px;
+}
+div.favPokemon > button {
+  font-size: 12px;
+  width: 60px;
+  height: 30px;
+  color: rgb(11, 56, 114);
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 16px;
+  border: 1px solid rgb(11, 56, 114);
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+div.favPokemon > button:hover {
+  background-color: rgba(255, 255, 255, 0.75);
+  cursor: pointer;
+}/*# sourceMappingURL=styles_favourites.css.map */
