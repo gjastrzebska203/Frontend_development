@@ -1,0 +1,122 @@
+div#content-Compare {
+  width: 100%;
+  height: 100vh;
+}
+
+button#submit {
+  margin: 4px;
+  color: rgb(11, 56, 114);
+  font-size: 16px;
+  padding: 4px;
+  border: 1px solid rgb(11, 56, 114);
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+button#submit:hover {
+  background-color: rgba(255, 255, 255, 0.75);
+  cursor: pointer;
+}
+
+input {
+  width: 240px;
+}
+
+div#compared {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+div.pokemon-compared {
+  margin: 16px;
+}
+
+div.pokemon-details {
+  padding: 24px 64px;
+  text-align: center;
+  text-transform: capitalize;
+  border: 1px solid rgb(11, 56, 114);
+  border-radius: 32px;
+  color: rgb(11, 56, 114);
+  background-color: rgba(240, 248, 255, 0.75);
+}
+div.pokemon-details > h2 {
+  font-size: 42px;
+}
+div.pokemon-details > img {
+  height: 100px;
+  margin: 16px;
+}
+div.pokemon-details > p {
+  font-size: 24px;
+}
+div.pokemon-details > h3 {
+  font-size: 32px;
+  margin-top: 16px;
+}
+div.pokemon-details > ul {
+  margin: 0 auto;
+  list-style-type: none;
+  font-size: 24px;
+}
+div.pokemon-details button {
+  border: 1px solid rgb(11, 56, 114);
+  border-radius: 16px;
+  font-size: 16px;
+  width: 160px;
+  height: 32px;
+  margin-top: 16px;
+}
+
+form#compare {
+  padding: 8px;
+  display: flex;
+}
+form#compare > input {
+  font-size: 16px;
+  padding: 4px;
+  border: 1px solid rgb(11, 56, 114);
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.5);
+  margin: 4px;
+}
+form#compare > input:hover {
+  background-color: rgba(255, 255, 255, 0.75);
+}
+form#compare > button {
+  margin: 4px;
+  color: rgb(11, 56, 114);
+  font-size: 16px;
+  padding: 4px;
+  border: 1px solid rgb(11, 56, 114);
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+form#compare > button:hover {
+  background-color: rgba(255, 255, 255, 0.75);
+  cursor: pointer;
+}
+form#compare > button#compare {
+  margin-right: 10px;
+}
+
+button {
+  margin: 4px;
+  color: rgb(11, 56, 114);
+  font-size: 16px;
+  padding: 4px;
+  border: 1px solid rgb(11, 56, 114);
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+button:hover {
+  background-color: rgba(255, 255, 255, 0.75);
+  cursor: pointer;
+}
+
+div#choose {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}/*# sourceMappingURL=styles_compare.css.map */
