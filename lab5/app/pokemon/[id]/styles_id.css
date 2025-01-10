@@ -1,0 +1,126 @@
+div.notes {
+  border: 1px solid rgb(11, 56, 114);
+  padding: 16px;
+  margin: 16px;
+  border-radius: 32px;
+}
+
+div.pokemon-details {
+  padding: 24px;
+  justify-self: center;
+  width: 30%;
+  text-align: center;
+  text-transform: capitalize;
+  border: 1px solid rgb(11, 56, 114);
+  border-radius: 32px;
+  color: rgb(11, 56, 114);
+  background-color: rgba(240, 248, 255, 0.75);
+}
+div.pokemon-details > h2 {
+  font-size: 42px;
+}
+div.pokemon-details > img {
+  height: 100px;
+  margin: 16px;
+}
+div.pokemon-details > p {
+  font-size: 24px;
+}
+div.pokemon-details > h3 {
+  font-size: 32px;
+  margin-top: 16px;
+}
+div.pokemon-details > ul {
+  margin: 0 auto;
+  list-style-type: none;
+  font-size: 24px;
+  width: 50%;
+}
+
+div.button-container > button {
+  border: 1px solid rgb(11, 56, 114);
+  margin-left: 4px;
+  margin-right: 4px;
+}
+
+div#breadcrumbs {
+  display: flex;
+}
+div#breadcrumbs > p {
+  margin: 4px;
+}
+div#breadcrumbs > a {
+  margin: 4px;
+  text-decoration: none;
+}
+div#breadcrumbs > a:hover {
+  color: rgba(11, 56, 114, 0.5);
+}
+div#breadcrumbs > a:first-child {
+  margin-left: 8px;
+}
+
+button.favourites-button {
+  font-size: 16px;
+  padding: 8px;
+  margin-top: 16px;
+  color: rgb(11, 56, 114);
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 16px;
+  border: 1px solid rgb(11, 56, 114);
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+button.favourites-button:hover {
+  background-color: rgba(255, 255, 255, 0.75);
+  cursor: pointer;
+}
+
+form {
+  margin-top: 16px;
+  color: rgb(11, 56, 114);
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  text-align: left;
+}
+form > button {
+  margin-top: 8px;
+  width: 100px;
+  border-radius: 16px;
+  border: 1px solid rgb(11, 56, 114);
+  color: rgb(11, 56, 114);
+  padding: 4px;
+}
+form > button:hover {
+  cursor: pointer;
+}
+form > div {
+  margin-top: 8px;
+}
+
+div.notes {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-row-gap: 8px;
+  grid-column-gap: 8px;
+}
+div.notes > .notes-item {
+  border-radius: 16px;
+  border: 1px solid rgb(11, 56, 114);
+  padding: 6px;
+  background-color: white;
+}
+div.notes > .notes-item > div.note-buttons {
+  width: 100%;
+  padding: 6px;
+  display: flex;
+  justify-content: space-around;
+}
+div.notes > .notes-item > div.note-buttons > button {
+  border-radius: 16px;
+  border: 1px solid rgb(11, 56, 114);
+  color: rgb(11, 56, 114);
+  padding: 4px;
+}
+div.notes > .notes-item > div.note-buttons > button:hover {
+  cursor: pointer;
+}/*# sourceMappingURL=styles_id.css.map */
