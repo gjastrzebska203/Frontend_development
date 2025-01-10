@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 async function getPokemonInfo(id) {
   const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`);
@@ -27,6 +28,7 @@ async function getPokemonList(limit, search, type) {
 }
 
 export default function PokemonList({ limit, search, type }) {
+  const router = useRouter();
   const [pokemonList, setPokemonList] = useState([]);
 
   useEffect(() => {
@@ -43,15 +45,49 @@ export default function PokemonList({ limit, search, type }) {
     fetchPokemonList();
   }, [limit, search, type]);
 
+  function handleClick1(pokemon_id) {
+    const compared_list = JSON.parse(localStorage.getItem("compared")) || {};
+    const pokemon_id2 = compared_list.p2 || "";
+    const new_compared = { p1: pokemon_id, p2: pokemon_id2 };
+    localStorage.setItem("compared", JSON.stringify(new_compared));
+  }
+
+  function handleClick2(pokemon_id) {
+    const compared_list = JSON.parse(localStorage.getItem("compared")) || {};
+    const pokemon_id1 = compared_list.p1 || "";
+    const new_compared = { p1: pokemon_id1, p2: pokemon_id };
+    localStorage.setItem("compared", JSON.stringify(new_compared));
+  }
+
   return (
     <div id="pokemon-buttons">
       {pokemonList.map((pokemon) => (
-        <Link key={pokemon.id} href={`/pokemon/${pokemon.id}`}>
-          <button className="pokemonButton">
+        <div key={pokemon.id} className="pokemonButton">
+          <div className="poke-info">
             <img src={pokemon.img} alt={pokemon.name} />
             {pokemon.id}. {pokemon.name}
+          </div>
+          <button
+            id="details"
+            onClick={() => router.push(`/pokemon/${pokemon.id}`)}
+          >
+            See details
           </button>
-        </Link>
+          <div className="compare-buttons">
+            <button
+              className="compare-pokemon"
+              onClick={() => handleClick1(pokemon.id)}
+            >
+              First compared
+            </button>
+            <button
+              className="compare-pokemon"
+              onClick={() => handleClick2(pokemon.id)}
+            >
+              Second compared
+            </button>
+          </div>
+        </div>
       ))}
     </div>
   );

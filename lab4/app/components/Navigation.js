@@ -40,7 +40,6 @@ export default function Navigation() {
         <div id="name">Pokemon Database</div>
         <input
           type="text"
-          value={pokemon_name || ""}
           onChange={(e) => setPokemonName(e.target.value)}
           onKeyDown={(e) => {
             if (e.key === "Enter" && pokemon_name) {

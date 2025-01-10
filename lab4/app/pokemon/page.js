@@ -66,9 +66,22 @@ export default function PokemonListPage() {
           />
           <button type="submit">Submit</button>
         </form>
-        <Link href={"/compare"}>
-          <button id="compare">Compare pokemons</button>
-        </Link>
+        <div id="compare">
+          <Link href={"/compare"}>
+            <button className="compare">Compare pokemons</button>
+          </Link>
+          <button
+            className="compare"
+            onClick={() => {
+              localStorage.setItem(
+                "compared",
+                JSON.stringify({ p1: "", p2: "" })
+              );
+            }}
+          >
+            Clear compare
+          </button>
+        </div>
       </div>
       <div id="pokemon-list">
         <PokemonList
